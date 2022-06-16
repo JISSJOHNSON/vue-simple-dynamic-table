@@ -35,13 +35,13 @@ components:{
 
 <script>
 import VueTable from 'vue-table';
-
+...
 components:{
+  ...,
   VueTable
 },
 data(){
   return{
-    
       headers: [
         {key: 'firstName', label: 'First Name'},
         {key: 'lastName', label: 'Last Name'},
@@ -56,6 +56,7 @@ data(){
       ]
   }
 }
+...
 </script>
 ```
 
