@@ -22,16 +22,9 @@ export default {
         {key: 'place', label: 'Place'},
       ],
       items: [
-        {firstName: 'Jiss', lastName: 'Johnson', email: 'contact@jissjohnson.info', phone: '+919544497526'},
-        {firstName: 'Jess', lastName: 'Johnson', email: 'contact@jessjohnson.info', phone: '+919567244423'},
-        {firstName: 'Johnson', lastName: 'M Joseph', email: 'contact@johnson.info', phone: '+919895845154'},
-        {
-          firstName: 'Sonia',
-          lastName: 'Johnson',
-          email: 'contact@soniajohnson.info',
-          phone: '+919895663219',
-          place: 'Pambanar'
-        },
+        {firstName: 'John', lastName: 'Doe', email: 'john@domain.com', phone: '1234567891'},
+        {firstName: 'Ben', lastName: 'Tiago', email: 'ben@domain.com', phone: '1234567892'},
+        {firstName: 'Alex', lastName: 'Joseph', email: 'alex@domain.com', phone: '1234567893'},
       ]
     };
   }

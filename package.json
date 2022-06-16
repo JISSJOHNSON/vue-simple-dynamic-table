@@ -1,5 +1,5 @@
 {
-  "name": "vue-table",
+  "name": "vue-simple-dynamic-table",
   "version": "0.1.0",
   "description": "A simple dynamic table build with vue.js",
   "author": {
@@ -14,7 +14,6 @@
     "*.js",
     "*.json"
   ],
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
