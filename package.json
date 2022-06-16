@@ -2,7 +2,12 @@
   "name": "vue-table",
   "version": "0.1.0",
   "description": "A simple dynamic table build with vue.js",
-  "author": "Jiss Johnson",
+  "author": {
+    "name":"Jiss Johnson",
+    "email": "contact@jissjohnson.info"
+  },
+  "repository": "https://github.com/JISSJOHNSON/vue-table",
+  "keywords": ["table","vue-table","simple table"],
   "main": "dist/vue-table.common.js",
   "files": [
     "dist/*",
@@ -12,7 +17,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-table src/components/VueTable.vue",
+    "build": "vue-cli-service build",
+    "build-module": "vue-cli-service build --target lib --name vue-table src/components/VueTable.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
