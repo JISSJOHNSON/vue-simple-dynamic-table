@@ -1,10 +1,16 @@
 {
   "name": "vue-table",
+  "main": "dist/vue-table.common.js",
+  "files": [
+    "dist/*",
+    "*.js",
+    "*.json"
+  ],
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vue-table src/components/VueTable.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

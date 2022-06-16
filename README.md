@@ -1,24 +1,64 @@
 # vue-table
 
-## Project setup
+A simple dynamic table build with vue.js
+
+## Installation
+
 ```
-npm install
+npm install --save vue-table
 ```
 
-### Compiles and hot-reloads for development
+### Importing globally into app
+
 ```
-npm run serve
+import VueTable from 'vue-table';
+
+Vue.use(VueTable);
 ```
 
-### Compiles and minifies for production
+### Importing into your component
+
 ```
-npm run build
+import VueTable from 'vue-table';
+
+components:{
+  VueTable
+}
 ```
 
-### Lints and fixes files
+### Usage
+
 ```
-npm run lint
+<template>
+  <vue-table :heading="tableHeading" :headers="headers" :items="items"></vue-table>
+</template>
+
+<script>
+import VueTable from 'vue-table';
+
+components:{
+  VueTable
+},
+data(){
+  return{
+    
+      headers: [
+        {key: 'firstName', label: 'First Name'},
+        {key: 'lastName', label: 'Last Name'},
+        {key: 'email', label: 'Email'},
+        {key: 'phone', label: 'Phone'},
+        {key: 'place', label: 'Place'},
+      ],
+      items: [
+        {firstName: 'John', lastName: 'Doe', email: 'john.doe@domain.com', phone: '1234567890'},
+        {firstName: 'Ben', lastName: 'Mathew', email: 'ben@domain.com', phone: '1234567891'},
+        {firstName: 'Alex', lastName: 'Jose', email: 'alex@domain.com', phone: '1234567892'},
+      ]
+  }
+}
+</script>
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Author
+
+[Jiss Johnson](https://jissjohnson.info)
