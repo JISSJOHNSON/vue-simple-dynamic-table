@@ -1,12 +1,14 @@
 {
   "name": "vue-table",
+  "version": "0.1.0",
+  "description": "A simple dynamic table build with vue.js",
+  "author": "Jiss Johnson",
   "main": "dist/vue-table.common.js",
   "files": [
     "dist/*",
     "*.js",
     "*.json"
   ],
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
