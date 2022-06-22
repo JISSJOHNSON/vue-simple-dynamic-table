@@ -1,4 +1,4 @@
-# vue-table
+# vue-table [link](https://www.npmjs.com/package/vue-simple-dynamic-table)
 
 A simple dynamic table build with vue.js
 
