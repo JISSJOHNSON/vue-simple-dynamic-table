@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "description": "A simple dynamic table build with vue.js",
   "author": {
-    "name":"Jiss Johnson",
+    "name": "Jiss Johnson",
     "email": "contact@jissjohnson.info"
   },
   "repository": "https://github.com/JISSJOHNSON/vue-table",
-  "keywords": ["table","vue-table","simple table"],
+  "keywords": [
+    "table",
+    "vue-table",
+    "simple table"
+  ],
   "main": "dist/vue-table.common.js",
   "files": [
     "dist/*",

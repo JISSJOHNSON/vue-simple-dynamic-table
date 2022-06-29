@@ -7,13 +7,13 @@ A simple dynamic table build with vue.js
 ## Installation
 
 ```
-npm install --save vue-table
+npm i --save vue-simple-dynamic-table
 ```
 
 ### Importing globally into app
 
 ```
-import VueTable from 'vue-table';
+import VueTable from 'vue-simple-dynamic-table';
 
 Vue.use(VueTable);
 ```
@@ -21,7 +21,7 @@ Vue.use(VueTable);
 ### Importing into your component
 
 ```
-import VueTable from 'vue-table';
+import VueTable from 'vue-simple-dynamic-table';
 
 components:{
   VueTable

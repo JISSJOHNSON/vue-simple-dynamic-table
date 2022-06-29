@@ -9,12 +9,16 @@
       <h3>{{ heading }}</h3>
     </div>
     <table>
+      <thead>
       <tr>
         <th v-for="(item,index) in headers" :key="index">{{ item.label }}</th>
       </tr>
+      </thead>
+      <tbody>
       <tr v-for="(item,index) in items" :key="index">
         <td v-for="(header,headerIndex) in headers" :key="headerIndex">{{ item[header.key] }}</td>
       </tr>
+      </tbody>
     </table>
   </div>
 </template>
