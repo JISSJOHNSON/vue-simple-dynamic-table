@@ -188,17 +188,6 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ "301f":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_style_css_vue_type_style_index_0_id_192cfeda_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("82aa");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_style_css_vue_type_style_index_0_id_192cfeda_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_style_css_vue_type_style_index_0_id_192cfeda_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
-
-
-/***/ }),
-
 /***/ "499e":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -465,118 +454,44 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ "82aa":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("aa18");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("34f2c5d4", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
-/***/ "8875":
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// addapted from the document.currentScript polyfill by Adam Miller
-// MIT license
-// source: https://github.com/amiller-gh/currentScript-polyfill
-
-// added support for Firefox https://bugzilla.mozilla.org/show_bug.cgi?id=1620505
-
-(function (root, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else {}
-}(typeof self !== 'undefined' ? self : this, function () {
-  function getCurrentScript () {
-    var descriptor = Object.getOwnPropertyDescriptor(document, 'currentScript')
-    // for chrome
-    if (!descriptor && 'currentScript' in document && document.currentScript) {
-      return document.currentScript
-    }
-
-    // for other browsers with native support for currentScript
-    if (descriptor && descriptor.get !== getCurrentScript && document.currentScript) {
-      return document.currentScript
-    }
-  
-    // IE 8-10 support script readyState
-    // IE 11+ & Firefox support stack trace
-    try {
-      throw new Error();
-    }
-    catch (err) {
-      // Find the second match for the "at" string to get file src url from stack.
-      var ieStackRegExp = /.*at [^(]*\((.*):(.+):(.+)\)$/ig,
-        ffStackRegExp = /@([^@]*):(\d+):(\d+)\s*$/ig,
-        stackDetails = ieStackRegExp.exec(err.stack) || ffStackRegExp.exec(err.stack),
-        scriptLocation = (stackDetails && stackDetails[1]) || false,
-        line = (stackDetails && stackDetails[2]) || false,
-        currentLocation = document.location.href.replace(document.location.hash, ''),
-        pageSource,
-        inlineScriptSourceRegExp,
-        inlineScriptSource,
-        scripts = document.getElementsByTagName('script'); // Live NodeList collection
-  
-      if (scriptLocation === currentLocation) {
-        pageSource = document.documentElement.outerHTML;
-        inlineScriptSourceRegExp = new RegExp('(?:[^\\n]+?\\n){0,' + (line - 2) + '}[^<]*<script>([\\d\\D]*?)<\\/script>[\\d\\D]*', 'i');
-        inlineScriptSource = pageSource.replace(inlineScriptSourceRegExp, '$1').trim();
-      }
-  
-      for (var i = 0; i < scripts.length; i++) {
-        // If ready state is interactive, return the script tag
-        if (scripts[i].readyState === 'interactive') {
-          return scripts[i];
-        }
-  
-        // If src matches, return the script tag
-        if (scripts[i].src === scriptLocation) {
-          return scripts[i];
-        }
-  
-        // If inline source matches, return the script tag
-        if (
-          scriptLocation === currentLocation &&
-          scripts[i].innerHTML &&
-          scripts[i].innerHTML.trim() === inlineScriptSource
-        ) {
-          return scripts[i];
-        }
-      }
-  
-      // If no match, return null
-      return null;
-    }
-  };
-
-  return getCurrentScript
-}));
-
-
-/***/ }),
-
-/***/ "aa18":
+/***/ "673a":
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".vue-table-container[data-v-192cfeda]{overflow-x:auto}table[data-v-192cfeda]{border-collapse:collapse;border-spacing:0;width:100%;border:1px solid #ddd}td[data-v-192cfeda],th[data-v-192cfeda]{text-align:left;padding:8px}tr[data-v-192cfeda]:nth-child(2n){background-color:#f2f2f2}", ""]);
+exports.push([module.i, ".vue-table-container[data-v-a1915314]{overflow-x:auto}table[data-v-a1915314]{border-collapse:collapse;border-spacing:0;width:100%;border:1px solid #ddd}td[data-v-a1915314],th[data-v-a1915314]{text-align:left;padding:8px}th[data-v-a1915314]{background-color:#3c3f41;color:#fff}tr[data-v-a1915314]:nth-child(2n){background-color:#f2f2f2}", ""]);
 // Exports
 module.exports = exports;
 
+
+/***/ }),
+
+/***/ "a9df":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_style_css_vue_type_style_index_0_id_a1915314_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("e6cf");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_style_css_vue_type_style_index_0_id_a1915314_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_3_style_css_vue_type_style_index_0_id_a1915314_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+
+
+/***/ }),
+
+/***/ "e6cf":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("673a");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("52de37a0", content, true, {"sourceMap":false,"shadowMode":false});
 
 /***/ }),
 
@@ -592,15 +507,7 @@ __webpack_require__.r(__webpack_exports__);
 
 if (typeof window !== 'undefined') {
   var currentScript = window.document.currentScript
-  if (true) {
-    var getCurrentScript = __webpack_require__("8875")
-    currentScript = getCurrentScript()
-
-    // for backward compatibility, because previously we directly included the polyfill
-    if (!('currentScript' in document)) {
-      Object.defineProperty(document, 'currentScript', { get: getCurrentScript })
-    }
-  }
+  if (false) { var getCurrentScript; }
 
   var src = currentScript && currentScript.src.match(/(.+\/)[^/]+\.js(\?.*)?$/)
   if (src) {
@@ -611,14 +518,18 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1212126c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTable.vue?vue&type=template&id=192cfeda&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-table-container"},[(_vm.heading)?_c('div',[_c('h3',[_vm._v(_vm._s(_vm.heading))])]):_vm._e(),_c('table',[_c('tr',_vm._l((_vm.headers),function(item,index){return _c('th',{key:index},[_vm._v(_vm._s(item.label))])}),0),_vm._l((_vm.items),function(item,index){return _c('tr',{key:index},_vm._l((_vm.headers),function(header,headerIndex){return _c('td',{key:headerIndex},[_vm._v(_vm._s(item[header.key]))])}),0)})],2)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"27f816ca-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTable.vue?vue&type=template&id=a1915314&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-table-container"},[(_vm.heading)?_c('div',[_c('h3',[_vm._v(_vm._s(_vm.heading))])]):_vm._e(),_c('table',[_c('thead',[_c('tr',_vm._l((_vm.headers),function(item,index){return _c('th',{key:index},[_vm._v(_vm._s(item.label))])}),0)]),_c('tbody',_vm._l((_vm.items),function(item,index){return _c('tr',{key:index},_vm._l((_vm.headers),function(header,headerIndex){return _c('td',{key:headerIndex},[_vm._v(_vm._s(item[header.key]))])}),0)}),0)])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/VueTable.vue?vue&type=template&id=192cfeda&scoped=true&
+// CONCATENATED MODULE: ./src/components/VueTable.vue?vue&type=template&id=a1915314&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueTable.vue?vue&type=script&lang=js&
+//
+//
+//
+//
 //
 //
 //
@@ -651,14 +562,14 @@ var staticRenderFns = []
     headers: {
       type: Array,
       required: true,
-      default: function _default() {
+      default: () => {
         return [];
       }
     },
     items: {
       type: Array,
       required: true,
-      default: function _default() {
+      default: () => {
         return [];
       }
     }
@@ -666,8 +577,8 @@ var staticRenderFns = []
 });
 // CONCATENATED MODULE: ./src/components/VueTable.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_VueTablevue_type_script_lang_js_ = (VueTablevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/assets/style.css?vue&type=style&index=0&id=192cfeda&scoped=true&lang=css&
-var stylevue_type_style_index_0_id_192cfeda_scoped_true_lang_css_ = __webpack_require__("301f");
+// EXTERNAL MODULE: ./src/assets/style.css?vue&type=style&index=0&id=a1915314&scoped=true&lang=css&
+var stylevue_type_style_index_0_id_a1915314_scoped_true_lang_css_ = __webpack_require__("a9df");
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -784,7 +695,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "192cfeda",
+  "a1915314",
   null
   
 )
