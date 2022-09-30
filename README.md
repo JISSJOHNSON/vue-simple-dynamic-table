@@ -44,6 +44,7 @@ components:{
 },
 data(){
   return{
+      tableHeading: 'users',
       headers: [
         {key: 'firstName', label: 'First Name'},
         {key: 'lastName', label: 'Last Name'},
